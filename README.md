@@ -1,4 +1,4 @@
-# ReadCsvFile
+# Read Csv File In C#
 This C# code snippet demonstrates a simple CSV file parser that reads data from a specified CSV file, handles cases where values may be enclosed in double quotes, and prints the parsed data to the console. The code utilizes a manual parsing approach, iterating through each line of the CSV file, detecting values within quotes, and constructing a list of string arrays to represent the rows and columns of the CSV data. The code provides a basic understanding of CSV parsing logic in C#.
 ```sh
 void Main()
