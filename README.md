@@ -4,7 +4,7 @@ This C# code snippet demonstrates a simple CSV file parser that reads data from 
 void Main()
 {
 	 // Specify the path of the CSV file
-        string filePath = @"C:\Users\VIJAY\Documents\TestCSV.csv";        
+        string filePath = @"C:\Users\INNOVATIVEVijay\Documents\TestCSV.csv";        
         var data=ReadCsvFileData(filePath);
 	foreach (string[] row in data)
         {
