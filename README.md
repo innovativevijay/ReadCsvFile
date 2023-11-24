@@ -4,12 +4,26 @@ This C# code snippet demonstrates a simple CSV file parser that reads data from 
 void Main()
 {
 	 // Specify the path of the CSV file
-        string filePath = @"C:\Users\Demo\Documents\TestCSV.csv";
+        string filePath = @"C:\Users\VIJAY\Documents\TestCSV.csv";
 
-        // Create a list to store the data from the CSV file
-        List<string[]> data = new List<string[]>();
+        
+        var data=ReadCsvFileData(filePath);
+		foreach (string[] row in data)
+        {
+            foreach (string value in row)
+            {
+                Console.Write(value + " ");
+            }
+            Console.WriteLine();
+        }
+        
+}
 
-        try
+public List<string[]> ReadCsvFileData(string filePath)
+{
+// Create a list to store the data from the CSV file
+		List<string[]> data = new List<string[]>();
+		try
         {
             // Read all lines from the CSV file
             string[] lines = File.ReadAllLines(filePath);
@@ -39,22 +53,13 @@ void Main()
 
                 data.Add(values.ToArray());
             }
-
-            // Print the data from the CSV file
-            foreach (string[] row in data)
-            {
-                foreach (string value in row)
-                {
-                    Console.Write(value + " ");
-                }
-                Console.WriteLine();
-            }
+			
         }
         catch (Exception ex)
         {
             Console.WriteLine("Error: " + ex.Message);
         }
+		return data;
 }
-
 // You can define other methods, fields, classes and namespaces here
 ```
